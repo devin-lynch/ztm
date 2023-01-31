@@ -1,0 +1,19 @@
+// originally, the only way to submit some form data to a server was through the <form> tag in HTML.
+// It can do a POST or GET request.
+// With JSON you can now grab the contents of the <input> in a form and submit those with JSON instead of as form data.
+    // JSON: JavaScript Object Notation.
+    // JSON is a syntax for storing and exchanging data.
+    // JSON is text, written with JavaScript object notation.
+        // JSON.parse() -- pass the JSON as the parameter and it will return an object
+            var obj = JSON.parse('{"name":"John", "age":"30", "city":"New York"}')
+        // JSON.stringify() -- pass an object as the parameter and it will return as JSON
+            var myJSON = JSON.stringify(obj)
+// You can now submit to the server whenever you want without it necessarily being a <form>, through AJAX.
+    // For a single page app:
+    // Event occurs on a webpage (such as logging in)
+    // XML HTTP Request object is created using JavaScript
+    // Sends a request to the web server
+    // Server processes the request
+    // Server sends the response back to the webpage
+    // Response is read by JavaScript
+    // User is able to log in!
