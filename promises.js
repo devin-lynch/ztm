@@ -38,9 +38,18 @@ const urls = [
 ]
 
 Promise.all(urls.map(url => {
-    return fetch('url').then(response => response.json())
+    return fetch(url).then(response => response.json()) // fetch returns a promise
 })).then(results => {
     console.log(results[0])
     console.log(results[1])
     console.log(results[2])
-})
+}).catch(() => console.log('error'))
+
+
+// a promise is an object that may produce a single value some time in the future
+// either ra resolved value, or a reason that it's not resolve (rejected)
+// can be in 3 possible states:
+    // fulfilled (resolved)
+    // rejected
+    // pending
+// promises are like event listeners, except a promise can only succeed/fail once! useful for things that are async success/failure like api calls. 
